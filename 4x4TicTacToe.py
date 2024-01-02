@@ -115,6 +115,7 @@ def winningCases(board):
     input1 = "X"
     input2 = "O"
 
+    #Using a nested loop for checking winning conditions        
     # Check rows and columns
     for i in range(4):
         if all(board[i * 4 + j] == input1 for j in range(4)) or all(board[i + j * 4] == input1 for j in range(4)):
@@ -130,7 +131,7 @@ def winningCases(board):
 
     return False
 
-
+#Inserting every winning condition one by one
 ##    if (
 ##            board[0] == input1 and board[1] == input1 and board[2] == input1 and board[4] == input1 or board[4] == input1 and board[5] == input1 and board[6] == input1 and board[7] == input1 or
 ##            board[8] == input1 and board[9] == input1 and board[10] == input1 and board[11] == input1 or board[12] == input1 and board[13] == input1 and board[14] == input1 and board[15] == input1 or
